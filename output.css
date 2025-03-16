@@ -7,11 +7,14 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
-    --color-green-500: oklch(0.723 0.219 149.579);
-    --color-sky-700: oklch(0.5 0.134 242.749);
-    --color-sky-800: oklch(0.443 0.11 240.79);
-    --color-white: #fff;
     --spacing: 0.25rem;
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --text-3xl: 1.875rem;
+    --text-3xl--line-height: calc(2.25 / 1.875);
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
+    --font-weight-semibold: 600;
     --default-font-family: var(--font-sans);
     --default-font-feature-settings: var(--font-sans--font-feature-settings);
     --default-font-variation-settings: var(
@@ -186,37 +189,36 @@
       max-width: 96rem;
     }
   }
-  .bg-sky-700 {
-    background-color: var(--color-sky-700);
+  .mx-auto {
+    margin-inline: auto;
   }
-  .px-4 {
-    padding-inline: calc(var(--spacing) * 4);
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
   }
-  .py-2 {
-    padding-block: calc(var(--spacing) * 2);
+  .mt-8 {
+    margin-top: calc(var(--spacing) * 8);
   }
-  .text-green-500 {
-    color: var(--color-green-500);
+  .ml-auto {
+    margin-left: auto;
   }
-  .text-white {
-    color: var(--color-white);
+  .max-w-\[992px\] {
+    max-width: 992px;
   }
-  .hover\:bg-sky-800 {
-    &:hover {
-      @media (hover: hover) {
-        background-color: var(--color-sky-800);
-      }
-    }
+  .text-3xl {
+    font-size: var(--text-3xl);
+    line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
-  .sm\:px-8 {
-    @media (width >= 40rem) {
-      padding-inline: calc(var(--spacing) * 8);
-    }
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
   }
-  .sm\:py-3 {
-    @media (width >= 40rem) {
-      padding-block: calc(var(--spacing) * 3);
-    }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
   }
 }
 @font-face {
@@ -236,8 +238,6 @@
   src: url(./assets/fonts/Roboto-Bold.ttf);
 }
 * {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
 }
 body {
@@ -344,4 +344,8 @@ p {
   bottom: -15%;
   left: 50%;
   transform: translateX(-50%);
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
 }

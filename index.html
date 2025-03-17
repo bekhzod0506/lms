@@ -27,7 +27,6 @@
                         * Lorem ipsum dolor sit amet consectetur adipisicing
                         elit.
                     </p>
-                    <p></p>
                 </div>
                 <div class="slider">
                     <div class="swiper">
@@ -60,7 +59,7 @@
                                 </p>
                             </div>
                         </div>
-
+                        <!-- Swiper Navigation Buttons -->
                         <div class="swiper-button-prev">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -87,13 +86,12 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Swiper Navigation Buttons -->
             </header>
         </div>
 
         <!-- main section includes courses' list -->
-        <main class="main-section">
+         <div class="container">
+          <main class="main-section">
             <a href="#" class="link-title">
                 <h1 class="main-section__title">Kurslar</h1>
             </a>
@@ -208,6 +206,8 @@
                 </a>
             </div>
         </main>
+         </div>
+        
 
         <!-- Swiperjs code script -->
         <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -219,6 +219,7 @@
                 spaceBetween: 10,
                 initialSlide: 0,
                 mousewheel: true,
+                loop: true,
                 pagination: {
                     el: ".swiper-pagination",
                     clickable: true,
@@ -227,7 +228,6 @@
                     nextEl: ".swiper-button-next",
                     prevEl: ".swiper-button-prev",
                 },
-                centeredSlides: true,
                 autoplay: {
                     delay: 2500,
                     disableOnInteraction: false,
